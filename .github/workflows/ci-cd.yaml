@@ -25,7 +25,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no ubuntu@54.174.84.153 'mkdir -p /home/ubuntu/nestjs'
 
     - name: Copy files to EC2
-      run: |
+      run: | 
         scp -o StrictHostKeyChecking=no -r . ubuntu@54.174.84.153:/home/ubuntu/nestjs
 
     - name: SSH and deploy
