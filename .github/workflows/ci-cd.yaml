@@ -22,15 +22,15 @@ jobs:
 
     - name: Create directory on EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@54.174.84.153 'mkdir -p /home/ubuntu/nestjs'
+        ssh -o StrictHostKeyChecking=no ubuntu@16.170.238.162 'mkdir -p /home/ubuntu/nestjs'
 
     - name: Copy files to EC2
       run: | 
-        scp -o StrictHostKeyChecking=no -r . ubuntu@54.174.84.153:/home/ubuntu/nestjs
+        scp -o StrictHostKeyChecking=no -r . ubuntu@16.170.238.162:/home/ubuntu/nestjs
 
     - name: SSH and deploy
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@54.174.84.153 << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@16.170.238.162 << 'EOF'
           cd /home/ubuntu/nestjs
           rm -rf node_modules package-lock.json
           npm install
