@@ -26,7 +26,7 @@ jobs:
 
     - name: Copy files to EC2
       run: | 
-        scp -o StrictHostKeyChecking=no -r . ubuntu@16.170.238.162:/home/ubuntu/nestjs
+        scp -o StrictHostKeyChecking=no -r n-est-app ubuntu@16.170.238.162:/home/ubuntu/nestjs
 
     - name: SSH and deploy
       run: |
